@@ -1,19 +1,30 @@
 #include "ofApp.h"
 
 void ofApp::setup() {
-
+    ofBackground(0);
+    generateBubbles();
 }
 
 void ofApp::update() {
-
+    for (yjb::Bubble& b : bubbles) {
+        b.move();
+    }
 }
 
 void ofApp::draw() {
+    for (yjb::Bubble& b : bubbles) {
+        b.draw();
+    }
+}
 
+void ofApp::generateBubbles() {
+    for (int i = 0; i < NUMBER_OF_BUBBLES; ++i) {
+        bubbles.push_back(yjb::Bubble());
+    }
 }
 
 void ofApp::keyPressed(int key) {
-
+    bubbles.push_back(yjb::Bubble());
 }
 
 void ofApp::keyReleased(int key) {
