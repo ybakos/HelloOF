@@ -14,6 +14,7 @@ void ofApp::update() {
 void ofApp::draw() {
     for (yjb::Bubble& b : bubbles) {
         b.draw();
+        b.considerBouncing(ofGetWindowWidth(), ofGetWindowHeight());
     }
 }
 
