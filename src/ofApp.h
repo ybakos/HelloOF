@@ -5,7 +5,7 @@
 class ofApp : public ofBaseApp {
 
   public:
-    static const int NUMBER_OF_BUBBLES = 10000;
+    static const int NUMBER_OF_BUBBLES = 50000;
     void setup();
     void update();
     void draw();
